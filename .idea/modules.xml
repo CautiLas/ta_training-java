@@ -4,7 +4,6 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/ta_training-java.iml" filepath="$PROJECT_DIR$/.idea/ta_training-java.iml" />
       <module fileurl="file://$PROJECT_DIR$/java/com.epam.training.lautaro_castillo/untitled/untitled.iml" filepath="$PROJECT_DIR$/java/com.epam.training.lautaro_castillo/untitled/untitled.iml" />
-      <module fileurl="file://$PROJECT_DIR$/java/com.epam.training.lautaro_castillo/untitled1/untitled1.iml" filepath="$PROJECT_DIR$/java/com.epam.training.lautaro_castillo/untitled1/untitled1.iml" />
     </modules>
   </component>
 </project>
