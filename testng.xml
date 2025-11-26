@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="CrossBrowserSuite" parallel="tests" thread-count="3">
+
+    <test name="Chrome Login Tests">
+        <parameter name="browser" value="CHROME"/>
+        <classes>
+            <class name="tests.LoginTests"/>
+        </classes>
+    </test>
+
+    <test name="Firefox Login Tests">
+        <parameter name="browser" value="FIREFOX"/>
+        <classes>
+            <class name="tests.LoginTests"/>
+        </classes>
+    </test>
+
+    <test name="Edge Login Tests">
+        <parameter name="browser" value="EDGE"/>
+        <classes>
+            <class name="tests.LoginTests"/>
+        </classes>
+    </test>
+
+</suite>
