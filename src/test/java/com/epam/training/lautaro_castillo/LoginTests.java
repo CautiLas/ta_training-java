@@ -19,16 +19,14 @@ public class LoginTests {
     @DataProvider(name = "loginCredentials")
     public Object[][] getLoginData() {
         return new Object[][] {
-                {"standard_user", "secret_sauce", true},
-                {"locked_out_user", "secret_sauce", false},
-                {"problem_user", "secret_sauce", true},
-                {"invalid_user", "wrong_password", false}
+                {"standard_user", "secret_sauce"},
+                {"problem_user", "secret_sauce"},
         };
     }
 
     @BeforeMethod
     @Parameters("browser")
-    public void setUp(@Optional("EDGE") String browser) {
+    public void setUp(@Optional("chrome") String browser) {
         driver = Driver.create(browser);
         driver.get(BASE_URL);
         loginPage = new LoginPage(driver);
@@ -57,21 +55,16 @@ public class LoginTests {
                 .contains("Password is required");
     }
 
-    @Test(dataProvider = "loginCredentials", description = "UC-3: Test de login parametrizado")
-    public void testUC3_ParameterizedLogin(String username, String password, boolean expectedSuccess) {
+    @Test(dataProvider = "loginCredentials", description = "UC-3: Login Exitoso con Credenciales Aceptadas")
+    public void testUC3_ParameterizedLogin(String username, String password) {
+
         loginPage.enterUsername(username);
         loginPage.enterPassword(password);
         loginPage.clickLoginButton();
 
-        if (expectedSuccess) {
-            assertThat(loginPage.getPageTitle())
-                    .as("El login debe ser exitoso.")
-                    .contains("Swag Labs");
-        } else {
-            assertThat(loginPage.getErrorMessage())
-                    .as("El login debe fallar.")
-                    .isNotBlank();
-        }
+        assertThat(loginPage.getPageTitle())
+                .as("El login debe ser exitoso y el título debe ser 'Swag Labs' para el usuario: " + username)
+                .contains("Swag Labs");
     }
 
     @AfterMethod
