@@ -36,19 +36,20 @@ public class LoginPage {
     public void clearPassword() {
         driver.findElement(passwordField).clear();
     }
-        public void clickLoginButton () {
-            driver.findElement(loginButton).click();
-        }
 
-
-        public String getErrorMessage () {
-            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-            return wait.until(ExpectedConditions.visibilityOfElementLocated(errorContainer)).getText();
-        }
-
-
-        public String getPageTitle () {
-            return driver.getTitle();
-        }
-
+    public void clickLoginButton() {
+        driver.findElement(loginButton).click();
     }
+
+
+    public String getErrorMessage() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(errorContainer)).getText();
+    }
+
+
+    public String getPageTitle() {
+        return driver.getTitle();
+    }
+
+}

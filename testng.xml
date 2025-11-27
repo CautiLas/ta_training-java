@@ -6,19 +6,22 @@
     <test name="Chrome Login Tests">
         <parameter name="browser" value="CHROME"/>
         <classes>
-            <class name="com.epam.training.lautaro_castillo.LoginTests"/>        </classes>
+            <class name="com.epam.training.lautaro_castillo.LoginTests"/>
+        </classes>
     </test>
 
     <test name="Firefox Login Tests">
         <parameter name="browser" value="FIREFOX"/>
         <classes>
-            <class name="com.epam.training.lautaro_castillo.LoginTests"/>        </classes>
+            <class name="com.epam.training.lautaro_castillo.LoginTests"/>
+        </classes>
     </test>
 
     <test name="Edge Login Tests">
         <parameter name="browser" value="EDGE"/>
         <classes>
-            <class name="com.epam.training.lautaro_castillo.LoginTests"/>        </classes>
+            <class name="com.epam.training.lautaro_castillo.LoginTests"/>
+        </classes>
     </test>
 
 </suite>

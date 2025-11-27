@@ -14,7 +14,7 @@ public class Driver {
         if (browserName != null && !browserName.trim().isEmpty()) {
             try {
                 type = BrowserType.valueOf(browserName.trim().toUpperCase());
-            } catch (IllegalArgumentException ignored)  {
+            } catch (IllegalArgumentException ignored) {
             } //INVALID USERNAME JUMPS TO DEFAULT
         }
 
