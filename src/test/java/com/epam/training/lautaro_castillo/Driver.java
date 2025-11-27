@@ -1,4 +1,3 @@
-// java
     package com.epam.training.lautaro_castillo;
 
     import org.openqa.selenium.WebDriver;
@@ -14,7 +13,7 @@
             try {
                 type = BrowserType.valueOf(browserName.toUpperCase());
             } catch (Exception e) {
-                type = BrowserType.CHROME; // fallback
+                type = BrowserType.CHROME;
             }
 
             switch (type) {
