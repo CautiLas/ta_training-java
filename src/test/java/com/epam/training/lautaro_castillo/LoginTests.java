@@ -1,4 +1,4 @@
-package com.epam.training.lautaro_castillo;
+        package com.epam.training.lautaro_castillo;
 
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -47,21 +47,17 @@ public class LoginTests {
     @Test(description = "UC-2: Test de login con Username lleno y Password vacio")
     public void testUC2_MissingPassword() {
         loginPage.enterUsername("standard_user");
-        loginPage.enterPassword("dummy_password");
-
-        loginPage.clearInputs();
-        loginPage.enterUsername("standard_user");
-
+        loginPage.clearPassword();
         loginPage.clickLoginButton();
 
+        String expectedError = "Epic sadface: Password is required";
         assertThat(loginPage.getErrorMessage())
                 .as("El mensaje de error de UC-2 debe indicar que el Password es requerido.")
-                .contains("Epic sadface: Username and password do not match any user in this service");
+                .contains(expectedError);
     }
 
     @Test(dataProvider = "loginCredentials", description = "UC-3: Test de login parametrizado (Válidos/Inválidos)")
     public void testUC3_ParameterizedLogin(String username, String password, boolean expectedSuccess) {
-
         loginPage.enterUsername(username);
         loginPage.enterPassword(password);
         loginPage.clickLoginButton();
