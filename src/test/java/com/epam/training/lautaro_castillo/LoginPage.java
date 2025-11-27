@@ -9,8 +9,8 @@ import java.time.Duration;
 
 public class LoginPage {
     private final WebDriver driver;
-    private final By usernameField = By.cssSelector("#user-name"); // ID
-    private final By passwordField = By.cssSelector("#password"); // ID
+    private final By usernameField = By.cssSelector("#user-name"); // id
+    private final By passwordField = By.cssSelector("#password"); // id
     private final By loginButton = By.cssSelector(".submit-button"); // Clase
     private final By errorContainer = By.cssSelector("h3[data-test='error']"); // Atributo
 

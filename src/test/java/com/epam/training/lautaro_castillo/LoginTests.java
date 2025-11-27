@@ -48,7 +48,7 @@ public class LoginTests {
     public void testUC2_MissingPassword() {
 
         loginPage.enterUsername("standard_user");
-        loginPage.enterPassword(""); // Usar sendKeys("") garantiza que el campo esté vacío
+        loginPage.enterPassword("");
 
         loginPage.clickLoginButton();
 
