@@ -54,3 +54,5 @@ Test Runner: TestNG;
 Assertions: AssertJ;
 
 [Optional] Loggers: SLF4J.
+
+The code can be run from the testng.xml file to run all tests in parallel mode. Otherwise you can use the Logintests class to run individually for each browser.

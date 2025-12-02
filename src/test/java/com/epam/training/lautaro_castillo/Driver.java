@@ -8,14 +8,14 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Driver {
 
-    public static WebDriver create(String browserName) {
+    protected static WebDriver create(String browserName) {
         BrowserType type = BrowserType.CHROME; // default
 
         if (browserName != null && !browserName.trim().isEmpty()) {
             try {
                 type = BrowserType.valueOf(browserName.trim().toUpperCase());
             } catch (IllegalArgumentException ignored) {
-            } //INVALID USERNAME JUMPS TO DEFAULT
+            } //si no se reconoce el browserName, se usa el default
         }
 
         switch (type) {

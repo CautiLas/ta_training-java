@@ -32,7 +32,7 @@ public class LoginTests {
         loginPage = new LoginPage(driver);
     }
 
-    @Test(description = "UC-1: Test de login con credenciales vacías")
+    @Test(description = "UC-1: Test de login con credenciales vacias")
     public void testUC1_EmptyCredentials() {
         loginPage.clearInputs();
         loginPage.clickLoginButton();
