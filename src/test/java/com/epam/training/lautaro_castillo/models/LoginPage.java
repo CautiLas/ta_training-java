@@ -1,4 +1,4 @@
-package com.epam.training.lautaro_castillo;
+package com.epam.training.lautaro_castillo.models;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.By;

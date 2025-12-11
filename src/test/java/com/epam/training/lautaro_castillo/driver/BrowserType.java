@@ -1,4 +1,4 @@
-package com.epam.training.lautaro_castillo;
+package com.epam.training.lautaro_castillo.driver;
 
 public enum BrowserType {
     CHROME,
